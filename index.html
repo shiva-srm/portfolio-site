@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of a full‑stack developer building delightful, performant web experiences." />
+  <meta name="theme-color" content="#0ea5e9" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav>
+      <h1 class="logo" aria-label="Home">MyPortfolio</h1>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button id="theme-toggle" class="icon-btn" aria-label="Toggle theme" aria-pressed="false">🌙</button>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" aria-labelledby="intro-heading">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <img src="images/profile.jpg" alt="Portrait of Your Name" class="profile-pic" />
+    <h2 id="intro-heading">Hello, I'm <span class="gradient-text">SHIVA R</span></h2>
+    <p class="subtitle">Full‑Stack Developer crafting fast, accessible web apps.</p>
+    <div class="badges" role="list" aria-label="Expertise">
+      <span role="listitem">React</span>
+      <span role="listitem">Node.js</span>
+      <span role="listitem">JavaScript</span>
+      <span role="listitem">MongoDB</span>
+    </div>
+    <div class="hero-cta">
+      <a href="#projects" class="btn">View My Work</a>
+      <a href="#contact" class="btn btn-ghost">Contact Me</a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="about" aria-labelledby="about-heading">
+    <h2 id="about-heading">About Me</h2>
+    <p>
+      I build modern, scalable web applications with a focus on accessibility, performance, and delightful UX.
+      I enjoy turning complex problems into elegant, maintainable solutions.
+    </p>
+    <div class="timeline">
+      <div class="timeline-item">
+        <span class="dot" aria-hidden="true"></span>
+        <div>
+          <h3>2024 — Present</h3>
+          <p>Freelance full‑stack developer helping startups ship faster.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <span class="dot" aria-hidden="true"></span>
+        <div>
+          <h3>2022 — 2024</h3>
+          <p>Built internal tools and design systems with React and Node.js.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="skills" aria-labelledby="skills-heading">
+    <h2 id="skills-heading">Skills</h2>
+    <div class="skill-cloud">
+      <span>React</span>
+      <span>Next.js</span>
+      <span>TypeScript</span>
+      <span>Node.js</span>
+      <span>Express</span>
+      <span>MongoDB</span>
+      <span>PostgreSQL</span>
+      <span>Tailwind</span>
+      <span>CSS</span>
+      <span>Accessibility</span>
+      <span>Testing</span>
+      <span>CI/CD</span>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="projects" aria-labelledby="projects-heading">
+    <h2 id="projects-heading">Featured Projects</h2>
+    <div class="project-grid">
+      <article class="project-card" tabindex="0">
+        <img src="images/project1.jpg" alt="E‑commerce website screenshot" />
+        <h3>E‑commerce Website</h3>
+        <p>React, Node.js, Stripe — end‑to‑end storefront.</p>
+        <a class="link" href="#" aria-label="Open E‑commerce Website project">Open case study →</a>
+      </article>
+      <article class="project-card" tabindex="0">
+        <img src="images/project2.jpg" alt="Task Manager app screenshot" />
+        <h3>Task Manager App</h3>
+        <p>Real‑time collaboration with Express and MongoDB.</p>
+        <a class="link" href="#" aria-label="Open Task Manager App project">Open case study →</a>
+      </article>
+      <article class="project-card" tabindex="0">
+        <img src="images/project3.jpg" alt="Portfolio website screenshot" />
+        <h3>Portfolio Website</h3>
+        <p>Responsive, accessible site with micro‑interactions.</p>
+        <a class="link" href="#" aria-label="Open Portfolio Website project">Open case study →</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact" aria-labelledby="contact-heading">
+    <h2 id="contact-heading">Contact Me</h2>
+    <form id="contact-form">
+      <label class="sr-only" for="name">Your Name</label>
+      <input id="name" name="name" type="text" placeholder="Your Name" required />
+      <label class="sr-only" for="email">Your Email</label>
+      <input id="email" name="email" type="email" placeholder="Your Email" required />
+      <label class="sr-only" for="message">Your Message</label>
+      <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Your Name. All Rights Reserved.</p>
+    <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
