@@ -1,133 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portfolio of a full‑stack developer building delightful, performant web experiences." />
-  <meta name="theme-color" content="#0ea5e9" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Header -->
   <header>
     <nav>
-      <h1 class="logo" aria-label="Home">MyPortfolio</h1>
+      <h1>Shiva</h1>
       <ul>
         <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#certificates">Certificates</a></li>
+        <li><a href="#github">GitHub</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <button id="theme-toggle" class="icon-btn" aria-label="Toggle theme" aria-pressed="false">🌙</button>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">🌙</button>
     </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero" aria-labelledby="intro-heading">
-    <div class="hero-bg" aria-hidden="true"></div>
-    <img src="images/profile.jpg" alt="Portrait of Your Name" class="profile-pic" />
-    <h2 id="intro-heading">Hello, I'm <span class="gradient-text">SHIVA R</span></h2>
-    <p class="subtitle">Full‑Stack Developer crafting fast, accessible web apps.</p>
-    <div class="badges" role="list" aria-label="Expertise">
-      <span role="listitem">React</span>
-      <span role="listitem">Node.js</span>
-      <span role="listitem">JavaScript</span>
-      <span role="listitem">MongoDB</span>
-    </div>
-    <div class="hero-cta">
-      <a href="#projects" class="btn">View My Work</a>
-      <a href="#contact" class="btn btn-ghost">Contact Me</a>
-    </div>
-  </section>
+  <!-- Particle Background -->
+  <div class="particles" id="particles"></div>
 
-  <!-- About -->
-  <section id="about" class="about" aria-labelledby="about-heading">
-    <h2 id="about-heading">About Me</h2>
-    <p>
-      I build modern, scalable web applications with a focus on accessibility, performance, and delightful UX.
-      I enjoy turning complex problems into elegant, maintainable solutions.
-    </p>
-    <div class="timeline">
-      <div class="timeline-item">
-        <span class="dot" aria-hidden="true"></span>
-        <div>
-          <h3>2024 — Present</h3>
-          <p>Freelance full‑stack developer helping startups ship faster.</p>
-        </div>
+  <section id="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h2>Hello, I'm <span class="highlight">Shiva</span></h2>
+        <p>Web Developer | Designer | Tech Enthusiast</p>
+        <button onclick="scrollToSection('projects')">View My Work</button>
       </div>
-      <div class="timeline-item">
-        <span class="dot" aria-hidden="true"></span>
-        <div>
-          <h3>2022 — 2024</h3>
-          <p>Built internal tools and design systems with React and Node.js.</p>
+      <div class="hero-image">
+        <img src="profile-photo.svg" alt="Shiva - Web Developer" id="profile-photo">
+        <div class="image-upload">
+          <input type="file" id="photo-upload" accept="image/*" style="display: none;">
+          <button onclick="document.getElementById('photo-upload').click()" class="upload-btn">Upload Photo</button>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Skills -->
-  <section id="skills" class="skills" aria-labelledby="skills-heading">
-    <h2 id="skills-heading">Skills</h2>
-    <div class="skill-cloud">
-      <span>React</span>
-      <span>Next.js</span>
-      <span>TypeScript</span>
-      <span>Node.js</span>
-      <span>Express</span>
-      <span>MongoDB</span>
-      <span>PostgreSQL</span>
-      <span>Tailwind</span>
-      <span>CSS</span>
-      <span>Accessibility</span>
-      <span>Testing</span>
-      <span>CI/CD</span>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I’m a passionate web developer who loves building creative and functional websites using HTML, CSS, JavaScript, and modern frameworks.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project-card">
+      <h3>Portfolio Website</h3>
+      <p>This site showcases my skills and personal projects.</p>
+    </div>
+    <div class="project-card">
+      <h3>Todo App</h3>
+      <p>A simple to-do list built with JavaScript and local storage.</p>
     </div>
   </section>
 
-  <!-- Projects -->
-  <section id="projects" class="projects" aria-labelledby="projects-heading">
-    <h2 id="projects-heading">Featured Projects</h2>
-    <div class="project-grid">
-      <article class="project-card" tabindex="0">
-        <img src="images/project1.jpg" alt="E‑commerce website screenshot" />
-        <h3>E‑commerce Website</h3>
-        <p>React, Node.js, Stripe — end‑to‑end storefront.</p>
-        <a class="link" href="#" aria-label="Open E‑commerce Website project">Open case study →</a>
-      </article>
-      <article class="project-card" tabindex="0">
-        <img src="images/project2.jpg" alt="Task Manager app screenshot" />
-        <h3>Task Manager App</h3>
-        <p>Real‑time collaboration with Express and MongoDB.</p>
-        <a class="link" href="#" aria-label="Open Task Manager App project">Open case study →</a>
-      </article>
-      <article class="project-card" tabindex="0">
-        <img src="images/project3.jpg" alt="Portfolio website screenshot" />
-        <h3>Portfolio Website</h3>
-        <p>Responsive, accessible site with micro‑interactions.</p>
-        <a class="link" href="#" aria-label="Open Portfolio Website project">Open case study →</a>
-      </article>
+  <section id="certificates">
+    <div class="certificates-container">
+      <div class="section-header">
+        <h2>My Certificates</h2>
+        <p>Professional achievements and certifications</p>
+      </div>
+      
+      <div class="certificate-upload-section">
+        <div class="upload-area" id="upload-area">
+          <div class="upload-content">
+            <div class="upload-icon">📜</div>
+            <h3>Upload Your Certificates</h3>
+            <p>Drag & drop your certificate images here or click to browse</p>
+            <input type="file" id="certificate-upload" accept="image/*" multiple style="display: none;">
+            <button class="upload-btn-cert" onclick="document.getElementById('certificate-upload').click()">
+              Choose Files
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="certificates-gallery" id="certificates-gallery">
+        <!-- Certificates will be dynamically added here -->
+      </div>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="contact" aria-labelledby="contact-heading">
-    <h2 id="contact-heading">Contact Me</h2>
-    <form id="contact-form">
-      <label class="sr-only" for="name">Your Name</label>
-      <input id="name" name="name" type="text" placeholder="Your Name" required />
-      <label class="sr-only" for="email">Your Email</label>
-      <input id="email" name="email" type="email" placeholder="Your Email" required />
-      <label class="sr-only" for="message">Your Message</label>
-      <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-      <button type="submit" class="btn">Send</button>
-    </form>
+  <section id="github">
+    <div class="github-container">
+      <div class="section-header">
+        <h2>My GitHub</h2>
+        <p>Explore my code repositories and contributions</p>
+      </div>
+      
+      <div class="github-profile-section">
+        <div class="github-profile-card">
+          <div class="github-avatar">
+            <img src="https://github.com/identicons/octocat.png" alt="GitHub Avatar" id="github-avatar">
+            <div class="avatar-upload">
+              <input type="file" id="avatar-upload" accept="image/*" style="display: none;">
+              <button onclick="document.getElementById('avatar-upload').click()" class="avatar-upload-btn">
+                📷
+              </button>
+            </div>
+          </div>
+          
+          <div class="github-info">
+            <h3 id="github-username">Your GitHub Username</h3>
+            <p id="github-bio">Add your GitHub bio here</p>
+            
+            <div class="github-stats">
+              <div class="stat-item">
+                <span class="stat-number" id="repos-count">0</span>
+                <span class="stat-label">Repositories</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number" id="followers-count">0</span>
+                <span class="stat-label">Followers</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number" id="following-count">0</span>
+                <span class="stat-label">Following</span>
+              </div>
+            </div>
+            
+            <div class="github-links">
+              <a href="#" id="github-profile-link" target="_blank" class="github-link-btn">
+                <span>🔗</span> Visit Profile
+              </a>
+              <button class="edit-profile-btn" onclick="openEditModal()">
+                <span>✏️</span> Edit Profile
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="github-repos-section">
+        <h3>Featured Repositories</h3>
+        <div class="repos-grid" id="repos-grid">
+          <!-- Repositories will be dynamically added here -->
+        </div>
+        
+        <div class="add-repo-section">
+          <button class="add-repo-btn" onclick="openAddRepoModal()">
+            <span>➕</span> Add Repository
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GitHub Edit Modal -->
+  <div id="github-edit-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeEditModal()">&times;</span>
+      <div class="modal-header">
+        <h3>Edit GitHub Profile</h3>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="github-username-input">GitHub Username</label>
+          <input type="text" id="github-username-input" placeholder="Enter your GitHub username">
+        </div>
+        <div class="form-group">
+          <label for="github-bio-input">Bio</label>
+          <textarea id="github-bio-input" placeholder="Tell us about yourself..."></textarea>
+        </div>
+        <div class="form-group">
+          <label for="repos-count-input">Repositories Count</label>
+          <input type="number" id="repos-count-input" placeholder="Number of repositories">
+        </div>
+        <div class="form-group">
+          <label for="followers-count-input">Followers Count</label>
+          <input type="number" id="followers-count-input" placeholder="Number of followers">
+        </div>
+        <div class="form-group">
+          <label for="following-count-input">Following Count</label>
+          <input type="number" id="following-count-input" placeholder="Number of following">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="save-btn" onclick="saveGitHubProfile()">Save Changes</button>
+        <button class="cancel-btn" onclick="closeEditModal()">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add Repository Modal -->
+  <div id="add-repo-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeAddRepoModal()">&times;</span>
+      <div class="modal-header">
+        <h3>Add Repository</h3>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="repo-name-input">Repository Name</label>
+          <input type="text" id="repo-name-input" placeholder="e.g., awesome-project">
+        </div>
+        <div class="form-group">
+          <label for="repo-description-input">Description</label>
+          <textarea id="repo-description-input" placeholder="Brief description of your repository..."></textarea>
+        </div>
+        <div class="form-group">
+          <label for="repo-url-input">Repository URL</label>
+          <input type="url" id="repo-url-input" placeholder="https://github.com/username/repo-name">
+        </div>
+        <div class="form-group">
+          <label for="repo-language-input">Primary Language</label>
+          <input type="text" id="repo-language-input" placeholder="e.g., JavaScript, Python, Java">
+        </div>
+        <div class="form-group">
+          <label for="repo-stars-input">Stars</label>
+          <input type="number" id="repo-stars-input" placeholder="Number of stars">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="save-btn" onclick="addRepository()">Add Repository</button>
+        <button class="cancel-btn" onclick="closeAddRepoModal()">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:shiva@example.com">shiva@example.com</a></p>
+    <p>GitHub: <a href="https://github.com/">github.com/yourprofile</a></p>
   </section>
 
   <footer>
-    <p>© 2025 Your Name. All Rights Reserved.</p>
-    <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
+    <p>© 2025 Shiva | All Rights Reserved</p>
   </footer>
+
+  <!-- Certificate Lightbox Modal -->
+  <div id="certificate-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <img id="modal-image" src="" alt="Certificate">
+      <div class="modal-info">
+        <h3 id="modal-title">Certificate Title</h3>
+        <p id="modal-description">Certificate description</p>
+        <div class="modal-actions">
+          <button id="download-btn" class="action-btn">Download</button>
+          <button id="delete-btn" class="action-btn delete">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
